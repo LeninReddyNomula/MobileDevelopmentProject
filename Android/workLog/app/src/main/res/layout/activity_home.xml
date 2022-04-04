@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/dashBoard"
+        android:layout_width="@dimen/dashboardWidth"
+        android:layout_height="@dimen/dashboardHeight"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/rounded_corner_view"
+        android:text="@string/dashboard"
+        android:textAlignment="center"
+        android:textColor="#FAFAFA"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/totalEarnings"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/button3"
+                app:layout_constraintStart_toEndOf="@+id/button3">
+
+                <TextView
+                    android:id="@+id/Monday"
+                    android:layout_width="@dimen/daysWidth"
+                    android:layout_height="@dimen/daysHeight"
+                    android:background="@drawable/days_deck_color"
+                    android:elegantTextHeight="true"
+                    android:text="@string/monday"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/mondayswipein"
+                    android:layout_width="@dimen/swipeInWidth"
+                    android:layout_height="@dimen/swipeInHeight"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#689F38"
+                    android:text="@string/swipein"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/mondayswipeout"
+                    android:layout_width="@dimen/swipeOutWidth"
+                    android:layout_height="@dimen/swipeOutHeight"
+                    android:background="#DF1313"
+                    android:text="@string/swipeout"
+                    android:textSize="20sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/mondayswipein"
+                    app:layout_constraintEnd_toEndOf="@+id/Monday"
+                    app:layout_constraintStart_toEndOf="@+id/mondayswipein"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Tuesday"
+                    android:layout_width="@dimen/daysWidth"
+                    android:layout_height="@dimen/daysHeight"
+                    android:background="@drawable/days_deck_color"
+                    android:elegantTextHeight="true"
+                    android:text="@string/tuesday"
+                    android:textAlignment="center"
+                    android:textDirection="locale"
+                    android:textIsSelectable="true"
+                    android:textSize="34sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tuesdayswipein"
+                    app:layout_constraintStart_toEndOf="@+id/tuesdayswipein"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/tuesdayswipein"
+                    android:layout_width="@dimen/swipeInWidth"
+                    android:layout_height="@dimen/swipeInHeight"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#689F38"
+                    android:text="@string/swipein"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/tuesdayswipeout"
+                    android:layout_width="@dimen/swipeOutWidth"
+                    android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_marginStart="220dp"
+                    android:background="#DF1313"
+                    android:text="@string/swipeout"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.967" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Wednesday"
+                    android:layout_width="@dimen/daysWidth"
+                    android:layout_height="@dimen/daysHeight"
+                    android:background="@drawable/days_deck_color"
+                    android:elegantTextHeight="true"
+                    android:text="@string/wednesday"
+                    android:textAlignment="center"
+                    android:textColor="#5C6BC0"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/wednesdayswipein"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/wednesdayswipein"
+                    android:layout_width="@dimen/swipeInWidth"
+                    android:layout_height="@dimen/swipeInHeight"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#689F38"
+                    android:text="@string/swipein"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/wednesdayswipeout"
+                    android:layout_width="@dimen/swipeOutWidth"
+                    android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#DF1313"
+                    android:text="@string/swipeout"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/thursday"
+                    android:layout_width="@dimen/daysWidth"
+                    android:layout_height="@dimen/daysHeight"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/days_deck_color"
+                    android:elegantTextHeight="true"
+                    android:text="@string/thursday"
+                    android:textAlignment="center"
+                    android:textColor="#5C6BC0"
+                    android:textSize="34sp"
+                    app:layout_constraintStart_toStartOf="@+id/thursdayswipein"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/thursdayswipein"
+                    android:layout_width="@dimen/swipeInWidth"
+                    android:layout_height="@dimen/swipeInHeight"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#689F38"
+                    android:text="@string/swipein"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/thursdayswipeout"
+                    android:layout_width="@dimen/swipeOutWidth"
+                    android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#DF1313"
+                    android:text="@string/swipeout"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/friday"
+                    android:layout_width="@dimen/daysWidth"
+                    android:layout_height="@dimen/daysHeight"
+                    android:background="@drawable/days_deck_color"
+                    android:elegantTextHeight="true"
+                    android:text="@string/friday"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/fridayswipein"
+                    app:layout_constraintStart_toEndOf="@+id/fridayswipein"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/fridayswipein"
+                    android:layout_width="@dimen/swipeInWidth"
+                    android:layout_height="@dimen/swipeInHeight"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#689F38"
+                    android:text="@string/swipein"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/fridayswipeout"
+                    android:layout_width="@dimen/swipeOutWidth"
+                    android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#DF1313"
+                    android:text="@string/swipeout"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/saturday"
+                    android:layout_width="@dimen/daysWidth"
+                    android:layout_height="@dimen/daysHeight"
+                    android:background="@drawable/days_deck_color"
+                    android:elegantTextHeight="true"
+                    android:text="@string/saturday"
+                    android:textAlignment="center"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/saturdayswipein"
+                    app:layout_constraintStart_toEndOf="@+id/saturdayswipein"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/saturdayswipein"
+                    android:layout_width="@dimen/swipeInWidth"
+                    android:layout_height="@dimen/swipeInHeight"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#689F38"
+                    android:text="@string/swipein"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/saturdayswipeout"
+                    android:layout_width="@dimen/swipeOutWidth"
+                    android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#DF1313"
+                    android:text="@string/swipeout"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sunday"
+                    android:layout_width="@dimen/daysWidth"
+                    android:layout_height="@dimen/daysHeight"
+                    android:background="@drawable/days_deck_color"
+                    android:elegantTextHeight="true"
+                    android:text="@string/sunday"
+                    android:textAlignment="center"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <Button
+                    android:id="@+id/sundayswipein"
+                    android:layout_width="@dimen/swipeOutWidth"
+                    android:layout_height="@dimen/swipeOutHeight"
+                    android:background="#689F38"
+                    android:text="@string/swipein"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <Button
+                    android:id="@+id/sundayswipeout"
+                    android:layout_width="@dimen/swipeOutWidth"
+                    android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_marginStart="2dp"
+                    android:background="#DF1313"
+                    android:text="@string/swipeout"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/sundayswipein"
+                    app:layout_constraintTop_toTopOf="@+id/sundayswipein"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/totalEarnings"
+        android:layout_width="@dimen/dashboardWidth"
+        android:layout_height="@dimen/dashboardHeight"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/rounded_corner_view"
+        android:elegantTextHeight="true"
+        android:text="@string/total_earning"
+        android:textAlignment="center"
+        android:textColor="#FAFAFA"
+
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+
+</android.support.constraint.ConstraintLayout>
