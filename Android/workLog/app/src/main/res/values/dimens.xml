@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dashboardWidth">450dp</dimen>
+    <dimen name="dashboardHeight">100dp</dimen>
+    <dimen name="daysWidth">450dp</dimen>
+    <dimen name="daysHeight">200dp</dimen>
+    <dimen name="swipeInWidth">215dp</dimen>
+    <dimen name="swipeInHeight">70</dimen>
+    <dimen name="swipeOutWidth">200dp</dimen>
+    <dimen name="swipeOutHeight">70dp</dimen>
+</resources>

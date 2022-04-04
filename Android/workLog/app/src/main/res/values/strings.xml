@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">workLog</string>
+    <string name="app_name">WORKLOG</string>
+    <string name="login_successful">Login Successful!</string>
+    <string name="user_id">User ID:</string>
+    <string name="enter_user_id">Enter User ID</string>
+    <string name="password">Password:</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="register_new_users">Register New Users</string>
+    <string name="login">Login</string>
+    <string name="dashboard">DASHBOARD</string>
+    <string name="monday">MONDAY</string>
+    <string name="tuesday">TUESDAY</string>
+    <string name="wednesday">WEDNESDAY</string>
+    <string name="thursday">THURSDAY</string>
+    <string name="saturday">SATURDAY</string>
+    <string name="sunday">SUNDAY</string>
+    <string name="textview">TextView</string>
+    <string name="total_earning">Total Earning : $</string>
+    <string name="SwipeIn">Button</string>
+    <string name="swipein">SwipeIn</string>
+    <string name="swipeout">SwipeOut</string>
+    <string name="mondayswipein">SwipeIn</string>
+    <string name="friday">friday</string>
+    <string name="shift_end">Shift End</string>
+    <string name="shift_start">shift start</string>
+    <string name="hourlyrate">HourlyRate</string>
+    <string name="tips">Tips</string>
+    <string name="save">SAVE</string>
+    <string name="enter_your_work_name">Enter your work name</string>
+    <string name="name">Name</string>
+    <string name="shiftstart">shiftstart</string>
+    <string name="shiftend">shiftEnd</string>
+    <string name="tips_recieved">tips</string>
+
 </resources>
