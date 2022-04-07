@@ -14,15 +14,15 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="9dp"
         android:contentDescription="@string/shiftend"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/hourlyrate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/shiftstart"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/companyName"
         app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/companyName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -32,7 +32,6 @@
         android:hint="@string/enter_your_work_name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="@string/name"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,9 +45,9 @@
         android:layout_marginTop="63dp"
         android:layout_marginBottom="55dp"
         android:contentDescription="@string/shiftstart"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toBottomOf="@+id/hourlyrate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toTopOf="@+id/companyName"
         app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
 
     <TextView
@@ -78,22 +77,22 @@
         app:layout_constraintTop_toTopOf="@+id/shiftstart" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/hourlyrate"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="46dp"
         android:layout_marginEnd="170dp"
         android:layout_marginBottom="19dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/hourlyrate"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="TouchTargetSizeCheck"
-        android:autofillHints="" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -101,40 +100,41 @@
         android:layout_height="52dp"
         android:layout_marginEnd="11dp"
         android:contentDescription="@string/tips_recieved"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toBottomOf="@+id/hourlyrate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toEndOf="@+id/hourlyrate"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/shiftstart"
         app:srcCompat="@android:drawable/btn_star_big_on"
         tools:ignore="ImageContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/tips"
         android:layout_width="153dp"
         android:layout_height="0dp"
         android:layout_marginBottom="1dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/tips"
         android:textAlignment="textEnd"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toEndOf="@+id/shiftstart"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
-        tools:ignore="TouchTargetSizeCheck"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="@+id/hourlyrate"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="363dp"
+        android:onClick="onclickSave"
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/hourlyrate" />
 
 </android.support.constraint.ConstraintLayout>
