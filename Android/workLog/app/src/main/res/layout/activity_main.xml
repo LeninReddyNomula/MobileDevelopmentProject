@@ -26,6 +26,8 @@
         android:ems="10"
         android:hint="@string/enter_user_id"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintBaseline_toBaselineOf="@+id/user"
         app:layout_constraintStart_toEndOf="@+id/user" />
 
@@ -45,12 +47,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
         app:layout_constraintBaseline_toBaselineOf="@+id/password"
-        app:layout_constraintStart_toEndOf="@+id/password"
-        android:autofillHints="" />
+        app:layout_constraintStart_toEndOf="@+id/password" />
 
     <Button
         android:id="@+id/btnRegister"
