@@ -31,5 +31,13 @@
     <string name="shiftstart">shiftstart</string>
     <string name="shiftend">shiftEnd</string>
     <string name="tips_recieved">tips</string>
+<<<<<<< Updated upstream
+=======
+    <string name="hh_mm">HH:MM</string>
+    <string name="reset">Reset</string>
+    <string name="quotetextview">TextViewLand</string>
+    <string name="database">DataBase</string>
+
+>>>>>>> Stashed changes
 
 </resources>
