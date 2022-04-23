@@ -16,7 +16,20 @@ public class WorkDeck extends AppCompatActivity {
     public String shiftend="Tomorrow";
     public Integer rate;
     public Integer tips;
+<<<<<<< Updated upstream
     public Integer id=2;
+=======
+    public static Integer id;
+    public float total;
+    EditText companyNameED;
+    EditText shiftStartED;
+    EditText shiftEndED;
+    EditText hourlyRateED;
+    EditText tipsED;
+    WebView wv;
+
+
+>>>>>>> Stashed changes
 
     protected void createDatabase()
     {
@@ -94,6 +107,21 @@ public class WorkDeck extends AppCompatActivity {
         db.close();
     }
 
+<<<<<<< Updated upstream
+=======
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_work_deck);
+
+        DownloadTask collectQuote = new DownloadTask();
+
+        collectQuote.execute("https://api.kanye.rest");
+
+
+
+    }
+>>>>>>> Stashed changes
 
     public void onclickSave(View view){
 
@@ -106,9 +134,13 @@ public class WorkDeck extends AppCompatActivity {
         TextView se = findViewById(R.id.shiftend);
         shiftend= (String) se.getText();*/
 
+<<<<<<< Updated upstream
         TextView rt = findViewById(R.id.hourlyrate);
         String rateText= (String) rt.getText();
         rate=Integer.parseInt(rateText);
+=======
+
+>>>>>>> Stashed changes
 
         TextView tip = findViewById(R.id.tips);
         String tipText= (String) rt.getText();
@@ -120,9 +152,81 @@ public class WorkDeck extends AppCompatActivity {
     }
 
     @Override
+<<<<<<< Updated upstream
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+=======
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+
+        switch(item.getItemId()){
+            case R.id.actionReset:
+                deleteTable();
+                Home.total=0;
+
+                Toast.makeText(this, "RESET IS COMPLETED", Toast.LENGTH_SHORT).show();
+            case R.id.actionDataBase:
+                createDatabase();
+                loadTableData();
+                Toast.makeText(this, "Database is created", Toast.LENGTH_SHORT).show();
+            default:
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public class DownloadTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... urls){
+            String result = "";
+            URL url;
+            HttpURLConnection urlConnection=null;
+
+            try {
+                url=new URL(urls[0]);
+                urlConnection = (HttpURLConnection) url.openConnection();
+                int responseCode = urlConnection.getResponseCode();
+                Log.i("Response Code: ", Integer.toString(responseCode));
+                if(responseCode == HttpURLConnection.HTTP_OK){
+                    BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+                    String inputLine;
+                    while ((inputLine = br.readLine()) != null) {
+                        result += inputLine;
+                    }
+                    br.close();
+                }
+                else
+                {
+                    Log.i("Error: ", "You have exceeded the daily access limit! Please Try again tomorrow.");
+                }
+                return result;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return "";
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            String titleLink="";
+            //Log.i("downloaded website content",s);
+
+            JSONObject jsonObject = null;
+            JSONObject articleObject = null;
+            int numberOfTopNews;
+            try {
+                jsonObject = new JSONObject(s);
+                if (!jsonObject.isNull("quote"))
+                {
+
+>>>>>>> Stashed changes
 
         createDatabase();
 

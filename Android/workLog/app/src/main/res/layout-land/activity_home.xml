@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F1F1"
     tools:context=".Home">
 
 
     <TextView
         android:id="@+id/dashBoard"
-        android:layout_width="@dimen/dashboardWidth"
-        android:layout_height="@dimen/dashboardHeight"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/rounded_corner_view"
@@ -30,12 +31,12 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
             android:orientation="vertical"
@@ -49,27 +50,30 @@
 
                 <TextView
                     android:id="@+id/Monday"
-                    android:layout_width="@dimen/daysWidth"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
-                    android:onClick="clickDay"
+                    android:onClick="mondayDeck"
+                    android:tag="dayCard"
                     android:text="@string/monday"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textSize="34sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <Button
                     android:id="@+id/mondayswipein"
-                    android:layout_width="@dimen/swipeInWidth"
-                    android:layout_height="@dimen/swipeInHeight"
-                    android:layout_marginStart="4dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="4dp"
                     android:background="#689F38"
                     android:text="@string/swipein"
+                    android:textColor="#FAFAFA"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -77,17 +81,16 @@
 
                 <Button
                     android:id="@+id/mondayswipeout"
-                    android:layout_width="@dimen/swipeOutWidth"
-                    android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="16dp"
                     android:background="#DF1313"
                     android:text="@string/swipeout"
                     android:textSize="20sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/mondayswipein"
                     app:layout_constraintEnd_toEndOf="@+id/Monday"
-<<<<<<< Updated upstream
+                    app:layout_constraintHorizontal_bias="0.939"
                     app:layout_constraintStart_toEndOf="@+id/mondayswipein"
-=======
->>>>>>> Stashed changes
                     tools:ignore="DuplicateSpeakableTextCheck" />
 
             </android.support.constraint.ConstraintLayout>
@@ -99,25 +102,28 @@
 
                 <TextView
                     android:id="@+id/Tuesday"
-                    android:layout_width="@dimen/daysWidth"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
-                    android:onClick="clickDay"
+                    android:onClick="tuesdayDeck"
+                    android:tag="dayCard"
                     android:text="@string/tuesday"
                     android:textAlignment="center"
-                    android:textAllCaps="true"
-                    android:textIsSelectable="false"
+                    android:textColor="#FAFAFA"
+                    android:textDirection="locale"
+                    android:textIsSelectable="true"
                     android:textSize="34sp"
                     app:layout_constraintEnd_toEndOf="@+id/tuesdayswipein"
+                    app:layout_constraintHorizontal_bias="0.531"
                     app:layout_constraintStart_toEndOf="@+id/tuesdayswipein"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/tuesdayswipein"
-                    android:layout_width="@dimen/swipeInWidth"
-                    android:layout_height="@dimen/swipeInHeight"
-                    android:layout_marginStart="4dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="4dp"
                     android:background="#689F38"
                     android:text="@string/swipein"
@@ -127,16 +133,14 @@
 
                 <Button
                     android:id="@+id/tuesdayswipeout"
-                    android:layout_width="@dimen/swipeOutWidth"
-                    android:layout_height="@dimen/swipeOutHeight"
-                    android:layout_marginStart="220dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="16dp"
                     android:background="#DF1313"
                     android:text="@string/swipeout"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.967" />
+                    app:layout_constraintBottom_toBottomOf="@+id/tuesdayswipein"
+                    app:layout_constraintEnd_toEndOf="parent" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
@@ -145,12 +149,15 @@
 
                 <TextView
                     android:id="@+id/Wednesday"
-                    android:layout_width="@dimen/daysWidth"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="wednesdayDeck"
+                    android:tag="dayCard"
                     android:text="@string/wednesday"
                     android:textAlignment="center"
+                    android:textColor="#5C6BC0"
                     android:textSize="34sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/wednesdayswipein"
@@ -160,9 +167,9 @@
 
                 <Button
                     android:id="@+id/wednesdayswipein"
-                    android:layout_width="@dimen/swipeInWidth"
-                    android:layout_height="@dimen/swipeInHeight"
-                    android:layout_marginStart="4dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="4dp"
                     android:background="#689F38"
                     android:text="@string/swipein"
@@ -173,15 +180,14 @@
 
                 <Button
                     android:id="@+id/wednesdayswipeout"
-                    android:layout_width="@dimen/swipeOutWidth"
-                    android:layout_height="@dimen/swipeOutHeight"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="16dp"
                     android:background="#DF1313"
                     android:text="@string/swipeout"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="@+id/wednesdayswipein"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -191,13 +197,16 @@
 
                 <TextView
                     android:id="@+id/thursday"
-                    android:layout_width="@dimen/daysWidth"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/daysHeight"
                     android:layout_marginTop="4dp"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="thursdayDeck"
+                    android:tag="dayCard"
                     android:text="@string/thursday"
                     android:textAlignment="center"
+                    android:textColor="#5C6BC0"
                     android:textSize="34sp"
                     app:layout_constraintStart_toStartOf="@+id/thursdayswipein"
                     app:layout_constraintTop_toTopOf="parent"
@@ -205,9 +214,9 @@
 
                 <Button
                     android:id="@+id/thursdayswipein"
-                    android:layout_width="@dimen/swipeInWidth"
-                    android:layout_height="@dimen/swipeInHeight"
-                    android:layout_marginStart="4dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="4dp"
                     android:background="#689F38"
                     android:text="@string/swipein"
@@ -217,15 +226,14 @@
 
                 <Button
                     android:id="@+id/thursdayswipeout"
-                    android:layout_width="@dimen/swipeOutWidth"
-                    android:layout_height="@dimen/swipeOutHeight"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="16dp"
                     android:background="#DF1313"
                     android:text="@string/swipeout"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="@+id/thursdayswipein"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -235,10 +243,12 @@
 
                 <TextView
                     android:id="@+id/friday"
-                    android:layout_width="@dimen/daysWidth"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="fridayDeck"
+                    android:tag="dayCard"
                     android:text="@string/friday"
                     android:textAlignment="center"
                     android:textAllCaps="true"
@@ -250,27 +260,28 @@
 
                 <Button
                     android:id="@+id/fridayswipein"
-                    android:layout_width="@dimen/swipeInWidth"
-                    android:layout_height="@dimen/swipeInHeight"
-                    android:layout_marginStart="4dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="4dp"
                     android:background="#689F38"
                     android:text="@string/swipein"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
 
                 <Button
                     android:id="@+id/fridayswipeout"
-                    android:layout_width="@dimen/swipeOutWidth"
-                    android:layout_height="@dimen/swipeOutHeight"
-                    android:layout_marginStart="220dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="4dp"
                     android:background="#DF1313"
                     android:text="@string/swipeout"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -280,12 +291,15 @@
 
                 <TextView
                     android:id="@+id/saturday"
-                    android:layout_width="@dimen/daysWidth"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="saturdayDeck"
+                    android:tag="dayCard"
                     android:text="@string/saturday"
                     android:textAlignment="center"
+                    android:textColor="#4E342E"
                     android:textSize="34sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/saturdayswipein"
@@ -294,9 +308,9 @@
 
                 <Button
                     android:id="@+id/saturdayswipein"
-                    android:layout_width="@dimen/swipeInWidth"
-                    android:layout_height="@dimen/swipeInHeight"
-                    android:layout_marginStart="4dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginBottom="4dp"
                     android:background="#689F38"
                     android:text="@string/swipein"
@@ -307,15 +321,15 @@
 
                 <Button
                     android:id="@+id/saturdayswipeout"
-                    android:layout_width="@dimen/swipeOutWidth"
-                    android:layout_height="@dimen/swipeOutHeight"
-                    android:layout_marginStart="220dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="4dp"
                     android:background="#DF1313"
                     android:text="@string/swipeout"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck" />
 
             </android.support.constraint.ConstraintLayout>
@@ -327,10 +341,12 @@
 
                 <TextView
                     android:id="@+id/sunday"
-                    android:layout_width="@dimen/daysWidth"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="sundayDeck"
+                    android:tag="dayCard"
                     android:text="@string/sunday"
                     android:textAlignment="center"
                     android:textSize="34sp"
@@ -341,8 +357,9 @@
 
                 <Button
                     android:id="@+id/sundayswipein"
-                    android:layout_width="@dimen/swipeOutWidth"
-                    android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="16dp"
                     android:background="#689F38"
                     android:text="@string/swipein"
                     android:textSize="20sp"
@@ -353,16 +370,14 @@
 
                 <Button
                     android:id="@+id/sundayswipeout"
-                    android:layout_width="@dimen/swipeOutWidth"
-                    android:layout_height="@dimen/swipeOutHeight"
-                    android:layout_marginStart="2dp"
+                    android:layout_width="320dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="16dp"
                     android:background="#DF1313"
                     android:text="@string/swipeout"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/sundayswipein"
-                    app:layout_constraintTop_toTopOf="@+id/sundayswipein"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -374,8 +389,8 @@
 
     <TextView
         android:id="@+id/totalEarnings"
-        android:layout_width="@dimen/dashboardWidth"
-        android:layout_height="@dimen/dashboardHeight"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
         android:layout_marginStart="4dp"
         android:background="@drawable/rounded_corner_view"
         android:elegantTextHeight="true"
@@ -388,7 +403,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992" />
+        app:layout_constraintVertical_bias="0.992"
+        tools:ignore="TextContrastCheck" />
 
 
 </android.support.constraint.ConstraintLayout>
