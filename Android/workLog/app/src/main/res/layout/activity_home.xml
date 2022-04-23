@@ -53,7 +53,7 @@
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
-                    android:onClick="clickDay"
+                    android:onClick="mondayDeck"
                     android:text="@string/monday"
                     android:textAlignment="center"
                     android:textAllCaps="true"
@@ -79,15 +79,15 @@
                     android:id="@+id/mondayswipeout"
                     android:layout_width="@dimen/swipeOutWidth"
                     android:layout_height="@dimen/swipeOutHeight"
+                    android:layout_marginTop="124dp"
                     android:background="#DF1313"
                     android:text="@string/swipeout"
                     android:textSize="20sp"
-                    app:layout_constraintBaseline_toBaselineOf="@+id/mondayswipein"
                     app:layout_constraintEnd_toEndOf="@+id/Monday"
-<<<<<<< Updated upstream
+
+                    app:layout_constraintHorizontal_bias="0.677"
                     app:layout_constraintStart_toEndOf="@+id/mondayswipein"
-=======
->>>>>>> Stashed changes
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="DuplicateSpeakableTextCheck" />
 
             </android.support.constraint.ConstraintLayout>
@@ -103,7 +103,7 @@
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
-                    android:onClick="clickDay"
+                    android:onClick="tuesdayDeck"
                     android:text="@string/tuesday"
                     android:textAlignment="center"
                     android:textAllCaps="true"
@@ -149,6 +149,7 @@
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="wednesdayDeck"
                     android:text="@string/wednesday"
                     android:textAlignment="center"
                     android:textSize="34sp"
@@ -196,6 +197,7 @@
                     android:layout_marginTop="4dp"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="thursdayDeck"
                     android:text="@string/thursday"
                     android:textAlignment="center"
                     android:textSize="34sp"
@@ -239,6 +241,7 @@
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="fridayDeck"
                     android:text="@string/friday"
                     android:textAlignment="center"
                     android:textAllCaps="true"
@@ -284,6 +287,7 @@
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="saturdayDeck"
                     android:text="@string/saturday"
                     android:textAlignment="center"
                     android:textSize="34sp"
@@ -331,6 +335,7 @@
                     android:layout_height="@dimen/daysHeight"
                     android:background="@drawable/days_deck_color"
                     android:elegantTextHeight="true"
+                    android:onClick="sundayDeck"
                     android:text="@string/sunday"
                     android:textAlignment="center"
                     android:textSize="34sp"

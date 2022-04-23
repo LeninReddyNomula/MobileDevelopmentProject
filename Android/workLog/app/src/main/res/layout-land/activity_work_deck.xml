@@ -140,11 +140,11 @@
         android:id="@+id/quote"
         android:layout_width="642dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/textview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
