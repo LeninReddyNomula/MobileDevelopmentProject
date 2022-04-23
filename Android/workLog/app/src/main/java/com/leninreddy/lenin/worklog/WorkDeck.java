@@ -173,8 +173,6 @@ public class WorkDeck extends AppCompatActivity {
         collectQuote.execute("https://api.kanye.rest");
 
 
-        createDatabase();
-        loadTableData();
 
 /*
         mPreferences=getSharedPreferences(SharedPrefFileName, MODE_PRIVATE);
@@ -194,9 +192,7 @@ public class WorkDeck extends AppCompatActivity {
 
     public void onclickSave(View view) throws ParseException {
 
-        mPreferences=getSharedPreferences(SharedPrefFileName, MODE_PRIVATE);
-        SharedPreferences.Editor preferenceEditor=mPreferences.edit();
-        preferenceEditor.putInt("count",count);
+
 
 
         companyNameED=findViewById(R.id.companyName);
@@ -250,7 +246,6 @@ public class WorkDeck extends AppCompatActivity {
             case R.id.actionReset:
                 deleteTable();
                 Home.total=0;
-                count=0;
                 Toast.makeText(this, "RESET IS COMPLETED", Toast.LENGTH_SHORT).show();
             case R.id.actionDataBase:
                 createDatabase();

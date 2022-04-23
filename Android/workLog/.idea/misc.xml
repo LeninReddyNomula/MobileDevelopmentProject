@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/drawable/days_deck_color.xml" value="0.1415" />
         <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/drawable/daysdeckcolor.xml" value="0.1575" />
         <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/drawable/rounded_corner_view.xml" value="0.144" />
-        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout/activity_home.xml" value="0.16" />
+        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout-land/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout-land/activity_main.xml" value="0.5020833333333333" />
+        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout-land/activity_work_deck.xml" value="0.4" />
+        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout/activity_work_deck.xml" value="0.25" />
+        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout/activity_work_deck.xml" value="0.4" />
         <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/layout/home.xml" value="0.25" />
+        <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/Project/MobileDevelopmentProject/Android/workLog/app/src/main/res/menu/mymenu.xml" value="0.3625" />
         <entry key="..\:/Users/lenin/Desktop/Bow Valley/second term/3203 Mobile development/workLog/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>

@@ -12,6 +12,7 @@
         android:theme="@style/Theme.WorkLog">
         <activity
             android:name=".WorkDeck"
+            android:parentActivityName=".Home"
             android:exported="false" />
         <activity
             android:name=".Home"
